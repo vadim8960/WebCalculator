@@ -16,8 +16,8 @@ export default {
 @import '@/scss/colors';
 
 .calc__output {
-  width: 500px;
-  height: 200px;
+  //width: 500px;
+  height: auto;
   display: flex;
   justify-content: right;
   align-items: end;

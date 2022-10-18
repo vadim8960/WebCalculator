@@ -1,17 +1,19 @@
 <template>
   <div class="calc__panel">
-    <div class="calc__input_history">история</div>
-    <div class="calc__input">входные данные</div>
+    <calc-output/>
+    <calc-input/>
     <calculator-keyboard :btns_data="btns_data"/>
   </div>
 </template>
 
 <script>
 import CalculatorKeyboard from "@/components/CalculatorKeyboard";
+import CalcOutput from "@/components/UI/CalcOutput";
+import CalcInput from "@/components/UI/CalcInput";
 
 export default {
   name: "CalculatorPanel",
-  components: {CalculatorKeyboard},
+  components: {CalcInput, CalcOutput, CalculatorKeyboard},
   data() {
     return {
       btns_data: [
@@ -52,13 +54,5 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: end;
-}
-
-.calc__input_history {
-  height: auto;
-}
-
-.calc__input {
-  height: 10%;
 }
 </style>
